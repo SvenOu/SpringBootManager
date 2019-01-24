@@ -1,4 +1,4 @@
-package utils;
+package com.sven.springbootmanager.common.utils;
 
 import javafx.scene.control.Alert;
 
@@ -8,7 +8,7 @@ import java.util.*;
 public class UIutils {
     public static void showDialog(String text) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("错误");
+        alert.setTitle("Error");
         alert.setHeaderText(null);
         alert.setContentText(text);
         alert.showAndWait();

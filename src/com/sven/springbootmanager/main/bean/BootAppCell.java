@@ -1,4 +1,4 @@
-package bean;
+package com.sven.springbootmanager.main.bean;
 
 public class BootAppCell {
     public static final String STATUS_RUNNING = "running";

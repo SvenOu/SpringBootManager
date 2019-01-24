@@ -1,4 +1,4 @@
-package utils;
+package com.sven.springbootmanager.common.utils;
 
 import javafx.concurrent.Task;
 

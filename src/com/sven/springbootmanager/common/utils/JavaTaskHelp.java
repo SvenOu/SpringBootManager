@@ -1,6 +1,6 @@
-package utils;
+package com.sven.springbootmanager.common.utils;
 
-import bean.JavaProcess;
+import com.sven.springbootmanager.common.bean.JavaProcess;
 
 import java.io.InputStream;
 import java.util.ArrayList;

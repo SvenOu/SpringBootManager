@@ -1,4 +1,4 @@
-package main;
+package com.sven.springbootmanager.main;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -6,11 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import utils.JobExecutor;
-import utils.TimedTaskManager;
-import utils.UIutils;
 
-public class Main extends Application {
+public class BootMangerApp extends Application {
     private static final int width = 1200;
     private static final int height = 600;
     private static Stage stage;
@@ -18,7 +15,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         stage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
         primaryStage.setTitle("Spring boot app manager");
         primaryStage.setScene(new Scene(root, width, height));
         primaryStage.setResizable(false);

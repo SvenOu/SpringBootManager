@@ -1,14 +1,15 @@
-package controller;
+package com.sven.springbootmanager.main.controller;
 
+import com.sven.springbootmanager.main.service.BootAppBinder;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
-import main.PersistenceSaver;
-import bean.BootAppCell;
+import com.sven.springbootmanager.main.dao.PersistenceSaver;
+import com.sven.springbootmanager.main.bean.BootAppCell;
 
-import model.SystemModel;
-import utils.JobTask;
-import view.AppListView;
+import com.sven.springbootmanager.main.model.SystemModel;
+import com.sven.springbootmanager.common.utils.JobTask;
+import com.sven.springbootmanager.main.view.AppListView;
 
 import java.util.logging.Logger;
 

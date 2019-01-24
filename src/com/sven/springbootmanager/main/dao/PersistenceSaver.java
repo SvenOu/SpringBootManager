@@ -1,6 +1,6 @@
-package main;
+package com.sven.springbootmanager.main.dao;
 
-import utils.Jackson2Util;
+import com.sven.springbootmanager.common.utils.Jackson2Util;
 
 import java.io.*;
 

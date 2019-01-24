@@ -1,15 +1,16 @@
-package controller;
+package com.sven.springbootmanager.main.service;
 
-import bean.BootAppCell;
+import com.sven.springbootmanager.main.bean.BootAppCell;
+import com.sven.springbootmanager.main.controller.Controller;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextInputDialog;
-import main.PersistenceSaver;
-import utils.*;
-import view.AppListView;
-import view.BootAppHBoxCell;
+import com.sven.springbootmanager.main.dao.PersistenceSaver;
+import com.sven.springbootmanager.common.utils.*;
+import com.sven.springbootmanager.main.view.AppListView;
+import com.sven.springbootmanager.main.view.BootAppHBoxCell;
 
 import java.awt.*;
 import java.io.File;
@@ -27,7 +28,6 @@ import java.util.Optional;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Handler;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

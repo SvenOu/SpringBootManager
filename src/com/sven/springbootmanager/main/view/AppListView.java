@@ -1,6 +1,6 @@
-package view;
+package com.sven.springbootmanager.main.view;
 
-import bean.BootAppCell;
+import com.sven.springbootmanager.main.bean.BootAppCell;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

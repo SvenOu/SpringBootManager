@@ -1,4 +1,4 @@
-package bean;
+package com.sven.springbootmanager.common.bean;
 
 public class JavaProcess {
     String pid;

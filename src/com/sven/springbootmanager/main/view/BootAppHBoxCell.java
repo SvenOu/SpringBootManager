@@ -1,7 +1,7 @@
-package view;
+package com.sven.springbootmanager.main.view;
 
 
-import bean.BootAppCell;
+import com.sven.springbootmanager.main.bean.BootAppCell;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

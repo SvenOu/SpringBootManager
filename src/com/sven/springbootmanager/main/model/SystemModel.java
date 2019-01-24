@@ -1,4 +1,4 @@
-package model;
+package com.sven.springbootmanager.main.model;
 
 public class SystemModel{
     private String logInfo;
