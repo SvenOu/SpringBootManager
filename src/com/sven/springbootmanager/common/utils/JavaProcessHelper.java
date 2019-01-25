@@ -15,8 +15,9 @@ public class JavaProcessHelper {
      * @param name    进程的名称，可前后模糊匹配
      */
     public static void killProcess(String name) {
+        Process process = null;
         try {
-            Process process = Runtime.getRuntime().exec("jps -l");
+            process = Runtime.getRuntime().exec("jps -l");
             InputStream is = process.getInputStream();
             Scanner in = new Scanner(is);
 
@@ -33,14 +34,19 @@ public class JavaProcessHelper {
             in.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if(process != null){
+                process.destroy();
+            }
         }
     }
 
 
     public static JavaProcess findProcess(String name) {
         JavaProcess p = null;
+        Process process = null;
         try {
-            Process process = Runtime.getRuntime().exec("jps -l");
+            process = Runtime.getRuntime().exec("jps -l");
             Scanner in = new Scanner(process.getInputStream());
             while (in.hasNextLine()) {
                 String line = in.nextLine();
@@ -59,6 +65,10 @@ public class JavaProcessHelper {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if(process != null){
+                process.destroy();
+            }
         }
         return p;
     }
@@ -69,9 +79,10 @@ public class JavaProcessHelper {
      */
     public static List<JavaProcess> getProcessList() {
         List<JavaProcess> javaProcessList = null;
+        Process process = null;
         try {
             javaProcessList = new ArrayList<>();
-            Process process = Runtime.getRuntime().exec("jps -l");
+            process = Runtime.getRuntime().exec("jps -l");
             Scanner in = new Scanner(process.getInputStream());
             while (in.hasNextLine()) {
                 String line = in.nextLine();
@@ -88,6 +99,10 @@ public class JavaProcessHelper {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if(process != null){
+                process.destroy();
+            }
         }
         return javaProcessList;
     }
