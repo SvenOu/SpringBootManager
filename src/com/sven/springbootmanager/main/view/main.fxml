@@ -2,15 +2,10 @@
 
 <?import com.sven.springbootmanager.main.view.AppListView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<VBox xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sven.springbootmanager.main.controller.Controller">
+<VBox xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sven.springbootmanager.main.controller.MainController">
     <AnchorPane>
         <VBox spacing="10">
             <HBox alignment="CENTER_LEFT" spacing="10">
@@ -43,8 +38,9 @@
         </HBox>
     </AnchorPane>
     <AnchorPane prefHeight="440" prefWidth="1216">
-        <TextArea fx:id="consoleText" editable="false" prefHeight="440" prefWidth="1216" style="-fx-control-inner-background:#cce6cf;   -fx-highlight-text-fill: #cce6cf;  " wrapText="true" />
-        <Button fx:id="clearConsoleBtn" layoutX="928.0" layoutY="14.0" mnemonicParsing="false" text="clear console" />
-        <Button fx:id="openCmdBtn" layoutX="1027.0" layoutY="14.0" mnemonicParsing="false" text="open system command line" />
+        <TabPane fx:id="consoleTabPanel" prefHeight="440" prefWidth="1216">
+            <tabs>
+            </tabs>
+        </TabPane>
     </AnchorPane>
 </VBox>

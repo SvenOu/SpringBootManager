@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<fx:root type="javafx.scene.control.Tab"
+         text="tab"
+         xmlns:fx="http://javafx.com/fxml">
+    <content>
+        <AnchorPane>
+            <children>
+                <TextArea fx:id="consoleText" editable="false" prefHeight="360" prefWidth="1216.0"
+                          style="-fx-control-inner-background:#cce6cf;   -fx-highlight-text-fill: #cce6cf;  " wrapText="true" />
+                <Button fx:id="openCmdBtn" layoutX="1027.0" layoutY="10.0" mnemonicParsing="false" text="open system command line" />
+                <Button fx:id="clearConsoleBtn" layoutX="925.0" layoutY="10.0" mnemonicParsing="false" text="clear console" />
+            </children>
+        </AnchorPane>
+    </content>
+</fx:root>

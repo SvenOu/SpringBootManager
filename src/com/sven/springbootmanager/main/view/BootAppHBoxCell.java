@@ -30,15 +30,26 @@ public class BootAppHBoxCell extends HBox {
         HBox.setMargin(portButton, new Insets(0, 10, 0, 10));
         HBox.setMargin(openUrlButton, new Insets(0, 10, 0, 10));
         getChildren().addAll(statusLabel, path, openUrlButton, portButton, button);
-
+        portButton.setPrefWidth(150);
+        openUrlButton.setPrefWidth(400);
         refresh();
     }
     public void refresh(){
         path.setText(bootAppCell.getPath());
         statusLabel.setText(bootAppCell.getStatus());
         button.setText(bootAppCell.getButtonText());
-        portButton.setText("Server port: " + bootAppCell.getPort());
-        openUrlButton.setText(bootAppCell.getUrl());
+        // TODO: 暂时这样处理
+        if(bootAppCell.getPath().contains("sourceCodeGenerator")){
+            portButton.setText("Server port: " + bootAppCell.getPort());
+            openUrlButton.setText(bootAppCell.getUrl());
+            portButton.setDisable(false);
+            portButton.setDisable(false);
+        }else {
+            portButton.setText("Server port: unknown");
+            openUrlButton.setText("unknown url");
+            portButton.setDisable(true);
+            openUrlButton.setDisable(true);
+        }
     }
 
     public Label getPath() {

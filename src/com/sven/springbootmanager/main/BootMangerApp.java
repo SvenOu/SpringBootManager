@@ -16,6 +16,7 @@ public class BootMangerApp extends Application {
     public void start(Stage primaryStage) throws Exception{
         stage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
+
         primaryStage.setTitle("Spring boot app manager");
         primaryStage.setScene(new Scene(root, width, height));
         primaryStage.setResizable(false);
