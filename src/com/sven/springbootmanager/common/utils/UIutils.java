@@ -54,7 +54,13 @@ public class UIutils {
         }
         try {
             Runtime rt = Runtime.getRuntime();
-            Process pr = rt.exec("cmd /c "+ commandStr);
+            Process pr = null;
+            if(OsCheck.getOperatingSystemType() == OsCheck.OSType.Windows){
+                pr = rt.exec("cmd /c "+ commandStr);
+            }else {
+                pr = rt.exec(new String[]{"bash","-c",commandStr.toString()});
+            }
+
             FileWriter fw = new FileWriter(logFile);
             fw.write(commandStr + "\n");
             BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream(),"UTF-8"));

@@ -7,7 +7,10 @@ public class CommandCreator {
 
     public static List<String> cdCommand(String path){
         List<String> cmds = new ArrayList<>();
-        cmds.add(path.substring(0,2));
+        OsCheck.OSType ostype= OsCheck.getOperatingSystemType();
+        if(ostype == OsCheck.OSType.Windows){
+            cmds.add(path.substring(0,2));
+        }
         cmds.add("cd "+ path);
         return cmds;
     }

@@ -26,7 +26,15 @@ public class JavaProcessHelper {
                 if (line.contains(name)) {
                     String[] lineArray = line.split("\\s");
                     if(lineArray.length >0){
-                        Runtime.getRuntime().exec("tskill " + lineArray[0]);
+                        Process processKill = null;
+                        if(OsCheck.getOperatingSystemType() == OsCheck.OSType.Windows){
+                            processKill = Runtime.getRuntime().exec("tskill " + lineArray[0]);
+
+                        }else {
+                            processKill = Runtime.getRuntime().exec(new String[]{"bash","-c", "kill " + lineArray[0]});
+                        }
+                        processKill.wait();
+                        processKill.destroy();
                     }
                 }
             }
