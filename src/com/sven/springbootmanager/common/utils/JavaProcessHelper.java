@@ -33,7 +33,6 @@ public class JavaProcessHelper {
                         }else {
                             processKill = Runtime.getRuntime().exec(new String[]{"bash","-c", "kill " + lineArray[0]});
                         }
-                        processKill.wait();
                         processKill.destroy();
                     }
                 }
